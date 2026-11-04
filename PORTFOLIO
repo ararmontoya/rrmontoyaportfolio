@@ -1,0 +1,1335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RR Martinez Montoya - Application Developer, Systems Builder and Automation Specialist Portfolio">
+<title>RR Martinez Montoya | Developer Portfolio</title>
+
+<style>
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --light-blue: #eff6ff;
+    --background: #f8fafc;
+    --white: #ffffff;
+    --text: #111827;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 17px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+/* GENERAL */
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading .eyebrow {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    margin-top: 8px;
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    max-width: 650px;
+    margin-top: 10px;
+}
+
+/* HERO */
+
+.hero {
+    padding: 110px 0 100px;
+    background:
+        radial-gradient(circle at 85% 20%, #dbeafe 0, transparent 30%),
+        linear-gradient(135deg, #ffffff, #eff6ff);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-label {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.08;
+    letter-spacing: -2.5px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-description {
+    color: #475569;
+    font-size: 17px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: #cbd5e1;
+    background: white;
+    color: var(--text);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.hero-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.hero-card h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.hero-stat {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-stat:last-child {
+    border: none;
+}
+
+.hero-stat strong {
+    display: block;
+    font-size: 23px;
+    color: var(--primary);
+}
+
+.hero-stat span {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 45px;
+}
+
+.about-text p {
+    color: #475569;
+    margin-bottom: 16px;
+}
+
+.about-panel {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.about-panel h3 {
+    margin-bottom: 15px;
+}
+
+.about-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.about-item:last-child {
+    border: none;
+}
+
+.about-item strong {
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* SKILLS */
+
+.skills-section {
+    background: white;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.skill-card {
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    transition: 0.2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: #bfdbfe;
+}
+
+.skill-icon {
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.skill-card h3 {
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.skill-card p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* PROJECTS */
+
+.projects-section {
+    background: var(--background);
+}
+
+.project-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.filter-btn {
+    border: 1px solid var(--border);
+    background: white;
+    padding: 9px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.25s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.project-banner {
+    height: 145px;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.project-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-category {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.project-content h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 17px;
+    flex: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.tag {
+    background: #eff6ff;
+    color: #1e40af;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.project-details {
+    border: none;
+    background: none;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.project-details:hover {
+    text-decoration: underline;
+}
+
+.project-card.hidden {
+    display: none;
+}
+
+/* EXPERIENCE */
+
+.experience-section {
+    background: white;
+}
+
+.timeline {
+    border-left: 2px solid #bfdbfe;
+    padding-left: 28px;
+    margin-left: 8px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    height: 14px;
+    width: 14px;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.timeline-item h3 {
+    font-size: 17px;
+}
+
+.timeline-item .date {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    margin: 4px 0 8px;
+}
+
+.timeline-item p {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 750px;
+}
+
+/* CONTACT */
+
+.contact-section {
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+}
+
+.contact-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 45px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-card h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+}
+
+footer span {
+    color: #93c5fd;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(15, 23, 42, 0.7);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal-content h2 {
+    margin-bottom: 12px;
+}
+
+.modal-content p {
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.modal-content ul {
+    padding-left: 20px;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    border: none;
+    background: none;
+    font-size: 27px;
+    cursor: pointer;
+    color: #64748b;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .hero-content,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        padding: 10px 25px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 12px 0;
+    }
+
+    .projects-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .contact-card {
+        padding: 28px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#home" class="logo">RR<span>.</span>MM</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+    <div class="container hero-content">
+
+        <div>
+            <div class="hero-label">APPLICATION DEVELOPMENT • SYSTEMS • AUTOMATION</div>
+
+            <h1>
+                Building practical<br>
+                <span>digital solutions.</span>
+            </h1>
+
+            <p class="hero-description">
+                I'm RR Martinez Montoya, a systems builder focused on developing
+                business applications, workforce management solutions, attendance
+                systems, and workflow automation. I combine operational experience
+                with technology to create tools that solve real business problems.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Explore My Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <h3>Areas of Focus</h3>
+
+            <div class="hero-stat">
+                <strong>Systems</strong>
+                <span>Business applications and management platforms</span>
+            </div>
+
+            <div class="hero-stat">
+                <strong>Automation</strong>
+                <span>Digital workflows and process improvement</span>
+            </div>
+
+            <div class="hero-stat">
+                <strong>Operations</strong>
+                <span>Workforce, attendance and employee management</span>
+            </div>
+
+            <div class="hero-stat">
+                <strong>Development</strong>
+                <span>Web applications and database-driven solutions</span>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="eyebrow">Introduction</div>
+            <h2>About Me</h2>
+            <p>Technology, operations, and practical problem-solving.</p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+                <p>
+                    I am an operations-oriented technology enthusiast with experience
+                    in customer service, workforce coordination, warehouse operations,
+                    and business process management.
+                </p>
+
+                <p>
+                    My interest in technology developed through identifying repetitive
+                    tasks and operational challenges that could be improved through
+                    digital systems. This led me to build applications for attendance
+                    monitoring, employee records, workforce management, and reporting.
+                </p>
+
+                <p>
+                    I work with technologies such as JavaScript, HTML, CSS, Python,
+                    Supabase, SQL, Google Apps Script, and API-based services.
+                    My approach is to understand the actual business process first,
+                    then build a solution around its requirements.
+                </p>
+
+                <p>
+                    I am continuously expanding my knowledge in application development,
+                    database management, system architecture, and workflow automation.
+                </p>
+            </div>
+
+            <div class="about-panel">
+                <h3>Professional Overview</h3>
+
+                <div class="about-item">
+                    <strong>Primary Focus</strong>
+                    Application Development and Automation
+                </div>
+
+                <div class="about-item">
+                    <strong>Business Solutions</strong>
+                    Workforce and Operations Management
+                </div>
+
+                <div class="about-item">
+                    <strong>Development Approach</strong>
+                    Process-driven and user-focused
+                </div>
+
+                <div class="about-item">
+                    <strong>Technical Interests</strong>
+                    APIs, Databases, AI and Automation
+                </div>
+
+                <div class="about-item">
+                    <strong>Location</strong>
+                    Philippines
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills-section" id="skills">
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="eyebrow">Technical Capabilities</div>
+            <h2>Skills & Technologies</h2>
+            <p>Tools and technologies used across my development and automation work.</p>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript, responsive layouts and interactive interfaces.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🐍</div>
+                <h3>Backend Development</h3>
+                <p>Python, FastAPI fundamentals, server-side application logic and APIs.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🗄️</div>
+                <h3>Database Management</h3>
+                <p>Supabase, SQL fundamentals, SQLite and structured employee records.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">⚙️</div>
+                <h3>Workflow Automation</h3>
+                <p>Google Apps Script, automated reporting and process improvement.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🔗</div>
+                <h3>Development Tools</h3>
+                <p>GitHub, GitHub Pages, Render and application deployment workflows.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🤖</div>
+                <h3>AI & Emerging Technology</h3>
+                <p>AI integration concepts, biometric system exploration and automation workflows.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects-section" id="projects">
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="eyebrow">Selected Work</div>
+            <h2>Projects & Applications</h2>
+            <p>
+                A collection of business applications and digital solutions
+                developed around operational and management requirements.
+            </p>
+        </div>
+
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="workforce">Workforce</button>
+            <button class="filter-btn" data-filter="automation">Automation</button>
+            <button class="filter-btn" data-filter="management">Management</button>
+            <button class="filter-btn" data-filter="other">Other Systems</button>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- PROJECT 1 -->
+            <article class="project-card" data-category="workforce">
+                <div class="project-banner">📱</div>
+                <div class="project-content">
+                    <div class="project-category">Workforce Management</div>
+                    <h3>BESI Offline Attendance V6</h3>
+                    <p>
+                        An attendance management application designed to support
+                        employee identification, QR-based scanning, attendance
+                        recording, shift handling, and management review.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Attendance</span>
+                        <span class="tag">QR</span>
+                    </div>
+                    <button class="project-details"
+                        data-title="BESI Offline Attendance V6"
+                        data-description="An attendance management application designed around employee identification and attendance workflows."
+                        data-features="Employee masterlist and identification|QR-based attendance scanning|IN and OUT recording|Overnight shift handling|Attendance review and correction|Export-oriented attendance records">
+                        View Project Details →
+                    </button>
+                </div>
+            </article>
+
+            <!-- PROJECT 2 -->
+            <article class="project-card" data-category="workforce">
+                <div class="project-banner">👥</div>
+                <div class="project-content">
+                    <div class="project-category">Workforce Management</div>
+                    <h3>BESI Workforce App</h3>
+                    <p>
+                        A workforce management platform designed to organize
+                        employee information, site assignments, management access,
+                        and workforce records.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Supabase</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Web App</span>
+                    </div>
+                    <button class="project-details"
+                        data-title="BESI Workforce App"
+                        data-description="A centralized workforce platform designed to organize employee records and site-based management."
+                        data-features="Employee masterlist|Site and client information|Employee status management|Coordinator and team leader access|Management dashboard|Centralized workforce records">
+                        View Project Details →
+                    </button>
+                </div>
+            </article>
+
+            <!-- PROJECT 3 -->
+            <article class="project-card" data-category="management">
+                <div class="project-banner">📦</div>
+                <div class="project-content">
+                    <div class="project-category">Operations Management</div>
+                    <h3>Rider Parcel Monitoring</h3>
+                    <p>
+                        A parcel monitoring concept designed to track delivery
+                        activity, organize rider records, and support delivery
+                        performance monitoring.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Database</span>
+                        <span class="tag">Tracking</span>
+                    </div>
+                    <button class="project-details"
+                        data-title="Rider Parcel Monitoring"
+                        data-description="A delivery operations solution designed to organize parcel activity and rider performance information."
+                        data-features="Rider information management|Parcel delivery records|Delivery status monitoring|Performance reporting structure|Commission calculation concept">
+                        View Project Details →
+                    </button>
+                </div>
+            </article>
+
+            <!-- PROJECT 4 -->
+            <article class="project-card" data-category="automation">
+                <div class="project-banner">📊</div>
+                <div class="project-content">
+                    <div class="project-category">Business Automation</div>
+                    <h3>DTR & Payroll Automation</h3>
+                    <p>
+                        An automated attendance reporting and time computation
+                        workflow designed to organize daily time records,
+                        cutoff periods, and overtime information.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Google Sheets</span>
+                        <span class="tag">Apps Script</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                    <button class="project-details"
+                        data-title="DTR & Payroll Automation"
+                        data-description="A workflow designed to reduce manual work involved in attendance consolidation and time record preparation."
+                        data-features="Daily time record organization|Cutoff-based records|Shift-based attendance handling|Overtime computation workflow|Automated spreadsheet processing|Report preparation">
+                        View Project Details →
+                    </button>
+                </div>
+            </article>
+
+            <!-- PROJECT 5 -->
+            <article class="project-card" data-category="automation">
+                <div class="project-banner">📝</div>
+                <div class="project-content">
+                    <div class="project-category">HR Workflow</div>
+                    <h3>Employee Leave Filing</h3>
+                    <p>
+                        An employee leave and absence filing workflow designed
+                        to capture requests, organize employee information,
+                        and support management review.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Google Apps Script</span>
+                        <span class="tag">Google Sheets</span>
+                        <span class="tag">HR</span>
+                    </div>
+                    <button class="project-details"
+                        data-title="Employee Leave Filing"
+                        data-description="An employee request workflow designed to organize leave and absence submissions."
+                        data-features="Employee identification|Leave and absence submissions|Request status monitoring|Management review|Employee record organization">
+                        View Project Details →
+                    </button>
+                </div>
+            </article>
+
+            <!-- PROJECT 6 -->
+            <article class="project-card" data-category="management">
+                <div class="project-banner">🚗</div>
+                <div class="project-content">
+                    <div class="project-category">Business Application</div>
+                    <h3>Car Rental Management</h3>
+                    <p>
+                        A business application concept for organizing vehicle
+                        information, rental transactions, customer records,
+                        and reservation workflows.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <button class="project-details"
+                        data-title="Car Rental Management"
+                        data-description="A business application concept structured around vehicle rental operations."
+                        data-features="Vehicle information management|Customer records|Rental transaction organization|Reservation workflow|Availability tracking concept">
+                        View Project Details →
+                    </button>
+                </div>
+            </article>
+
+            <!-- PROJECT 7 -->
+            <article class="project-card" data-category="management">
+                <div class="project-banner">🦷</div>
+                <div class="project-content">
+                    <div class="project-category">Records Management</div>
+                    <h3>Dental Records System</h3>
+                    <p>
+                        A records management application concept designed
+                        to organize patient profiles, dental information,
+                        and appointment-related records.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Web Application</span>
+                        <span class="tag">Database</span>
+                        <span class="tag">Records</span>
+                    </div>
+                    <button class="project-details"
+                        data-title="Dental Records System"
+                        data-description="A structured records management concept for dental office information."
+                        data-features="Patient profile organization|Dental record structure|Appointment information|Record retrieval workflow|Management interface concept">
+                        View Project Details →
+                    </button>
+                </div>
+            </article>
+
+            <!-- PROJECT 8 -->
+            <article class="project-card" data-category="other">
+                <div class="project-banner">🧠</div>
+                <div class="project-content">
+                    <div class="project-category">Biometric Technology</div>
+                    <h3>Face Biometrics System</h3>
+                    <p>
+                        A biometric attendance application built around camera
+                        capture, face enrollment workflows, and attendance
+                        system integration.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                    <button class="project-details"
+                        data-title="Face Biometrics System"
+                        data-description="A biometric application developed to explore camera-based identity verification and attendance workflows."
+                        data-features="Camera interface|Face enrollment workflow|Biometric matching integration concept|Attendance recording workflow|Python backend|FastAPI application">
+                        View Project Details →
+                    </button>
+                </div>
+            </article>
+
+            <!-- PROJECT 9 -->
+            <article class="project-card" data-category="workforce">
+                <div class="project-banner">📍</div>
+                <div class="project-content">
+                    <div class="project-category">Location-Based Systems</div>
+                    <h3>Geofence Attendance</h3>
+                    <p>
+                        A location-aware attendance workflow designed to
+                        validate employee check-ins against an authorized
+                        workplace location.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Geolocation</span>
+                        <span class="tag">Web App</span>
+                    </div>
+                    <button class="project-details"
+                        data-title="Geofence Attendance"
+                        data-description="A location-based attendance workflow designed to support workplace check-in validation."
+                        data-features="Browser geolocation|Workplace location validation|Attendance check-in workflow|Location-based restrictions|Attendance record integration">
+                        View Project Details →
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience-section" id="experience">
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="eyebrow">Professional Background</div>
+            <h2>Work Experience</h2>
+            <p>Experience in operations, customer service, and team coordination.</p>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Warehouse Team Leader</h3>
+                <div class="date">May 2026 – July 2026</div>
+                <p>
+                    Supervised warehouse activities, assigned daily tasks,
+                    monitored productivity, coordinated receiving and dispatch,
+                    and supported inventory and operational processes.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Virtual Assistant / Operations Manager</h3>
+                <div class="date">February 2024 – February 2026</div>
+                <p>
+                    Managed daily workflows, supported team coordination,
+                    monitored performance indicators, handled customer escalations,
+                    and assisted with reporting and administrative operations.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Customer Service Representative – Consbeez</h3>
+                <div class="date">May 2023 – February 2024</div>
+                <p>
+                    Handled customer inquiries, appointment scheduling,
+                    follow-ups, call documentation, and service-related concerns.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Barista – Malay Dynastea</h3>
+                <div class="date">October 2022 – February 2023</div>
+                <p>
+                    Assisted customers, prepared beverages, maintained service
+                    standards, and supported daily store operations.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Customer Service Representative – Ajune Outsourcing Services</h3>
+                <div class="date">May 2022 – October 2022</div>
+                <p>
+                    Managed customer communications through phone, email,
+                    and chat while assisting with inquiries and complaints.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+    <div class="container">
+
+        <div class="contact-card">
+            <div class="eyebrow">Let's Connect</div>
+            <h2>Have a project in mind?</h2>
+            <p>
+                I'm open to opportunities involving application development,
+                business systems, automation, and technology-driven operations.
+            </p>
+
+            <div class="contact-links">
+                <!-- Replace with your actual email -->
+                <a href="mailto:YOUR_EMAIL@example.com" class="btn btn-primary">
+                    Send an Email
+                </a>
+
+                <!-- Replace with your actual LinkedIn profile -->
+                <a href="https://www.linkedin.com/" target="_blank"
+                   rel="noopener noreferrer" class="btn btn-outline">
+                    LinkedIn
+                </a>
+
+                <!-- Replace with your actual GitHub profile -->
+                <a href="https://github.com/" target="_blank"
+                   rel="noopener noreferrer" class="btn btn-outline">
+                    GitHub
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© <span id="year"></span> RR Martinez Montoya. All Rights Reserved.</p>
+    <p>Application Development | Business Systems | Automation</p>
+</footer>
+
+<!-- PROJECT MODAL -->
+<div class="modal" id="projectModal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <h3>Key Features</h3>
+        <ul id="modalFeatures"></ul>
+    </div>
+</div>
+
+<script>
+// MOBILE NAVIGATION
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+    });
+});
+
+// PROJECT FILTERS
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        projectCards.forEach(card => {
+            const category = card.dataset.category;
+
+            if (filter === "all" || category === filter) {
+                card.classList.remove("hidden");
+            } else {
+                card.classList.add("hidden");
+            }
+        });
+
+    });
+});
+
+// PROJECT DETAILS MODAL
+
+const modal = document.getElementById("projectModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const modalFeatures = document.getElementById("modalFeatures");
+const modalClose = document.getElementById("modalClose");
+
+document.querySelectorAll(".project-details").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        modalTitle.textContent = button.dataset.title;
+        modalDescription.textContent = button.dataset.description;
+
+        modalFeatures.innerHTML = "";
+
+        const features = button.dataset.features.split("|");
+
+        features.forEach(feature => {
+            const item = document.createElement("li");
+            item.textContent = feature;
+            modalFeatures.appendChild(item);
+        });
+
+        modal.classList.add("show");
+    });
+
+});
+
+modalClose.addEventListener("click", () => {
+    modal.classList.remove("show");
+});
+
+modal.addEventListener("click", event => {
+    if (event.target === modal) {
+        modal.classList.remove("show");
+    }
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        modal.classList.remove("show");
+    }
+});
+
+// AUTOMATIC FOOTER YEAR
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
